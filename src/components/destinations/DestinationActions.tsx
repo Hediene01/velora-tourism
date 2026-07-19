@@ -1,0 +1,3 @@
+'use client';
+import Link from 'next/link';import {Check,Plus} from 'lucide-react';import {useState} from 'react';import type {Locale} from '@/types';
+export function DestinationActions({id,locale}:{id:string;locale:Locale}){const [added,setAdded]=useState(false);const add=()=>{const current=JSON.parse(localStorage.getItem('velora-destinations')??'[]') as string[];localStorage.setItem('velora-destinations',JSON.stringify([...new Set([...current,id])]));setAdded(true)};return <div className="detail-actions"><Link className="button gold" href={`/${locale}/trip-builder?destination=${id}`}>Customize this journey →</Link><button className="button detail-add" onClick={add}>{added?<Check/>:<Plus/>}{added?'Added to my trip':'Add to my trip'}</button></div>}

@@ -1,0 +1,2 @@
+import {notFound} from 'next/navigation';import {DestinationDetail} from '@/components/destinations/DestinationDetail';import {getDestination} from '@/data/destinations';import type {Locale} from '@/types';
+export default async function Page({params}:{params:Promise<{locale:Locale;id:string}>}){const {locale,id}=await params;const destination=getDestination(id);if(!destination)notFound();return <DestinationDetail destination={destination} locale={locale}/>}

@@ -1,0 +1,4 @@
+import { packages } from '@/data/packages';
+import type { Dictionary } from '@/i18n/dictionaries';
+import type { Locale } from '@/types';
+export function PackageRail({locale,d}:{locale:Locale;d:Dictionary}){return <section id="journeys" className="journeys"><div className="journey-head"><h2>{d.pkg.title}</h2><p>{d.pkg.copy}</p></div><div className="package-rail">{packages.map((p,i)=><article key={p.id}><span>0{i+1}</span><div><p>{p.duration} {d.pkg.days}</p><h3>{p.title}</h3><p>{p.summary}</p></div><div className="package-price"><small>{d.pkg.from}</small><strong>{new Intl.NumberFormat(locale,{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(p.startingPrice)}</strong><a href={`/${locale}/trip-builder?package=${p.id}`}>{d.pkg.customize} →</a></div></article>)}</div></section>}

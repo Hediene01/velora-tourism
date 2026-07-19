@@ -1,0 +1,6 @@
+import type { Package } from '@/types';
+export const packages:Package[]=[
+{id:'istanbul-essentials',title:'Istanbul Essentials',duration:4,destinationIds:['istanbul'],summary:'A private introduction to the city’s imperial heart, living neighborhoods and Bosphorus rhythm.',inclusions:['Private transfers','Licensed guide','Bosphorus cruise'],exclusions:['Flights','Hotel'],hotelLevel:'Boutique 4–5 star',vehicleType:'Private premium sedan',audience:'First-time visitors',startingPrice:1280},
+{id:'istanbul-sapanca',title:'Istanbul & Sapanca',duration:5,destinationIds:['istanbul','sapanca'],summary:'Urban discovery balanced with a quiet lakeside escape.',inclusions:['Private vehicle','Airport transfers','Day-trip planning'],exclusions:['Flights','Meals'],hotelLevel:'Boutique 4 star',vehicleType:'VIP V-Class',audience:'Families and couples',startingPrice:1840},
+{id:'cappadocia-escape',title:'Cappadocia Escape',duration:3,destinationIds:['cappadocia'],summary:'A tightly curated long weekend among valleys, cave dwellings and dawn skies.',inclusions:['Airport transfers','Private guide','Valley tour'],exclusions:['Balloon flight','Flights'],hotelLevel:'Premium cave hotel',vehicleType:'Private minivan',audience:'Couples and explorers',startingPrice:1160},
+];

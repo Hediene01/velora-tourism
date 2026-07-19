@@ -1,0 +1,1 @@
+export const siteConfig={name:'Velora Türkiye',url:process.env.NEXT_PUBLIC_SITE_URL??'http://localhost:3000',whatsapp:process.env.NEXT_PUBLIC_WHATSAPP_NUMBER??'905551234567',locales:['en','tr','ar','fr'] as const};
